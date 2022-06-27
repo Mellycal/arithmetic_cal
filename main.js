@@ -1,27 +1,20 @@
 
-function calc()
-{
-    var n1 = parseFloat (document.getElementById('n1').value) ;
-    var n2 = parseFloat (document.getElementById('n2').value) ;
-    var oper = document.getElementById('operators').value;
+const num1 = parseFloat( prompt('Enter num1: '));
+const num2 = parseFloat( prompt('Enter num2: '));
 
-    if(oper === '+')
-    {
-        document.getElementById('result').value = n1+n2;
-    }
+const operator = prompt('Enter operator (+, -, /, *)');
+let result = 0;
 
-    if(oper === '-')
-    {
-        document.getElementById('result').value = n1-n2;
+    if(operator == '+'){
+        result = num1 + num2;
     }
-
-    if(oper === '/')
-    {
-        document.getElementById('result').value = n1/n2;
+    else if(operator == '-'){
+        result = num1 - num2;
     }
-
-    if(oper === '*')
-    {
-        document.getElementById('result').value = n1*n2;
+    else if(operator == '/'){
+        result = num1 / num2;
     }
-}
+    else if(operator == '*'){
+        result = num1 * num2;
+    }
+    document.write(num1 + operator + num2 +' = ' + result);
